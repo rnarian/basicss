@@ -26,12 +26,12 @@ Base styles I've been using recently...
      * basicss
      */
 
-    @import path/to/basicss/basicss;
+    @import 'path/to/basicss/basicss';
 
     /**
      * userstyles
      */
 
-    @import path/to/yourstyles/nav;
-    @import path/to/yourstyles/whatever;
+    @import 'path/to/yourstyles/nav';
+    @import 'path/to/yourstyles/whatever';
 
