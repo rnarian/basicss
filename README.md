@@ -11,7 +11,7 @@ Base styles I've been using recently...
      */
 
     /**
-     * boilerscss overrides
+     * basicss overrides
      * 
      * any defaults in basicss/basicss/_settings.scss
      * may be overridden...
