@@ -1,0 +1,23 @@
+/**
+ * _links.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+
+$colorLink: $colorBlue!default;
+$colorLinkHover: darken($colorLink, 10%)!default;
+
+a {
+  color: $colorLink;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $colorLinkHover;
+  text-decoration: underline;
+}
+
+a:focus { outline: thin dotted; }
+
+a:hover, a:active { outline: 0; }

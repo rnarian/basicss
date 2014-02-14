@@ -1,0 +1,30 @@
+@if $stackedObject {
+/**
+ * _stacked.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Stapelt mehrere Container übereinander.
+ *
+ * Usage:
+ * <div class="stacked">
+ *   <div class="stacked__item">Stack1</div>
+ *   <div class="stacked__item">Stack1</div>
+ * </div>
+ *
+ */
+
+.stacked {
+  position: relative;
+  width: 100%;
+}
+
+.stacked__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+}//@if

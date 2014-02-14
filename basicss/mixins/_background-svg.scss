@@ -1,0 +1,25 @@
+/**
+ * _background-svg.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * SVG als Hintergrundgrafik mit PNG Fallback.
+ *
+ * Usage:
+ * .element {
+ *   @include background-svg(../pfad/zum/bild/bildname); // ohne dateiendung
+ * }
+ *
+ */
+
+@mixin background-svg($dir) {
+  background-image: url("#{$dir}.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  .lt-ie9 & {
+    background-image: url("#{$dir}.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

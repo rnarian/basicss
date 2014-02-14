@@ -1,0 +1,169 @@
+@if $arrowObject {
+/**
+ * _arrow.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="arrow arrow--top-left">
+ *  ...
+ * </div>
+ *
+ */
+
+.arrow {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+  }
+}
+
+/**
+ * Arrow Top
+ */
+
+.arrow--top,
+.arrow--top-left,
+.arrow--top-right {
+  &:before {
+    border-left: $arrowSize solid transparent;
+    border-right: $arrowSize solid transparent;
+    border-bottom: $arrowSize solid $colorWhite;
+    top: -$arrowSize;
+  }
+}
+
+.arrow--top {
+  &:before {
+    left: 50%;
+    margin-left: -$arrowSize;
+  }
+}
+
+.arrow--top-left {
+  &:before {
+    left: $baseUnit;
+    left: toRem($baseUnit);
+  }
+}
+
+.arrow--top-right {
+  &:before {
+    right: $baseUnit;
+    right: toRem($baseUnit);
+  }
+}
+
+/**
+ * Arrow Bottom
+ */
+
+.arrow--bottom,
+.arrow--bottom-left,
+.arrow--bottom-right {
+  &:before {
+    border-left: $arrowSize solid transparent;
+    border-right: $arrowSize solid transparent;
+    border-top: $arrowSize solid $colorWhite;
+    bottom: -$arrowSize;
+  }
+}
+
+.arrow--bottom {
+  &:before {
+    left: 50%;
+    margin-left: -$arrowSize;
+  }
+}
+
+.arrow--bottom-left {
+  &:before {
+    left: $baseUnit;
+    left: toRem($baseUnit);
+  }
+}
+
+.arrow--bottom-right {
+  &:before {
+    right: $baseUnit;
+    right: toRem($baseUnit);
+  }
+}
+
+/**
+ * Arrow Left
+ */
+
+.arrow--left,
+.arrow--left-top,
+.arrow--left-bottom {
+  &:before {
+    border-top: $arrowSize solid transparent;
+    border-bottom: $arrowSize solid transparent;
+    border-right: $arrowSize solid $colorWhite;
+    left: -$arrowSize;
+  }
+}
+
+.arrow--left {
+  &:before {
+    top: 50%;
+    margin-top: -$arrowSize;
+  }
+}
+
+.arrow--left-top {
+  &:before {
+    top: $baseUnit;
+    top: toRem($baseUnit);
+  }
+}
+
+.arrow--left-bottom {
+  &:before {
+    bottom: $baseUnit;
+    bottom: toRem($baseUnit);
+  }
+}
+
+/**
+ * Arrow Right
+ */
+
+.arrow--right,
+.arrow--right-top,
+.arrow--right-bottom {
+  &:before {
+    border-top: $arrowSize solid transparent;
+    border-bottom: $arrowSize solid transparent;
+    border-left: $arrowSize solid $colorWhite;
+    right: -$arrowSize;
+  }
+}
+
+.arrow--right {
+  &:before {
+    top: 50%;
+    margin-top: -$arrowSize;
+  }
+}
+
+.arrow--right-top {
+  &:before {
+    top: $baseUnit;
+    top: toRem($baseUnit);
+  }
+}
+
+.arrow--right-bottom {
+  &:before {
+    bottom: $baseUnit;
+    bottom: toRem($baseUnit);
+  }
+}
+
+}//@if

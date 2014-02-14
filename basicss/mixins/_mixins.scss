@@ -1,0 +1,19 @@
+/**
+ * _mixins.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Various mixins
+ *
+ */
+
+/**
+ * ellipsis...
+ */
+
+@mixin ellipsis {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

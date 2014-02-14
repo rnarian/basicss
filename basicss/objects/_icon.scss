@@ -1,0 +1,32 @@
+/**
+ * _icon.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <i class="icon [icon--nav-toggle]"></i>
+ *
+ */
+
+/**
+ * Alle icons werden als .svg exportiert unter
+ * /assets/images/icons abgelegt und von grunt-svgmin
+ * und grunt-grunticon weiterverarbeitet.
+ *
+ * Output unter /assets/images/icons/grunticon
+ */
+
+.icon {
+  width: $baseUnit;
+  height: $baseUnit;
+  vertical-align: middle;
+  @include display-inline-block;
+}
+
+/**
+ * Beispiel für ein Icon
+ *
+ * .icon--mobile-nav-toggle {
+ *   @include background-svg("../images/nav-toggle");
+ * }
+ */

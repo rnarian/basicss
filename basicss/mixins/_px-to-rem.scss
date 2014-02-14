@@ -1,0 +1,43 @@
+/**
+ * _px-to-rem.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * .element {
+ *   @include px-to-rem(padding, 0 24px)
+ * }
+ *
+ * Output:
+ * .element {
+ *   padding: 0 24px;
+ *   padding: 0 1.5rem;
+ * }
+ *
+ */
+
+@function toRem($px) {
+  $rem: $px / $baseFontSize;
+  @return #{$rem}rem;
+}
+
+@mixin px-to-rem($prop, $values) {
+
+  $output: ();
+
+  @each $value in $values {
+    @if $value != 0 {
+      $value: toRem($value);
+    }
+    $output: append($output, $value);
+  }
+
+  #{$prop}: $values; // Fallback
+  #{$prop}: $output;
+}
+
+.element {
+  @include px-to-rem(padding, 0 24px);
+  @include px-to-rem(margin, 0 24px 0 24px);
+  @include px-to-rem(margin-bottom, 0);
+}

@@ -1,0 +1,97 @@
+/**
+ * _settings.scss
+ *
+ * Author: Marian Friedmann
+ */
+
+/**
+ * Various defaults
+ */
+
+$debug: false!default;
+$baseline: false!default;
+$prototyping: false!default;
+
+/**
+ * Default objects
+ */
+
+$arrowObject: false!default;
+$boxedObject: false!default;
+$stackedObject: false!default;
+$navObject: true!default;
+$gridObject: true!default;
+$buttonObject: true!default;
+
+/**
+ * Default helper
+ */
+
+$spacingHelper: true!default;
+$typoHelper: true!default;
+$widthHelper: true!default;
+$debugHelper: false!default;
+
+/**
+ * Default fonts
+ */
+
+$fontSans: "Helvetica Neue", sans-serif!default;
+$fontSerif: Georgia, serif!default;
+
+$fontMain: $fontSans!default;
+
+/**
+ * Default font size
+ */
+
+$baseFontSize: 16px!default;
+$baseLineHeight: 24px!default;
+
+/**
+ *  Default spacing
+ */
+
+$baseUnit: $baseLineHeight!default;
+$lineHeightRatio: $baseLineHeight / $baseFontSize;
+
+/**
+ * Default breakpoints
+ */
+
+$breakTablet: 481px!default;
+$breakDesktop: 1024px!default;
+$breakDesktopWide: 1200px!default;
+
+/**
+ * Arrows
+ */
+
+$arrowSize: 10px!default;
+
+/**
+ * Default colors
+ *
+ * Basic values from colors.css v1.0
+ * http://clrs.cc
+ */
+
+$colorNavy: #001f3f!default;
+$colorBlue: #0074d9!default;
+$colorAqua: #7fdbff!default;
+$colorTeal: #39cccc!default;
+$colorOlive: #3d9970!default;
+$colorGreen: #2ecc40!default;
+$colorLime: #01ff70!default;
+$colorYellow: #ffdc00!default;
+$colorOrange: #ff851b!default;
+$colorRed: #ff4136!default;
+$colorFuchsia: #f012be!default;
+$colorPurple: #b10dc9!default;
+$colorMaroon: #85144b!default;
+$colorWhite: white!default;
+$colorSilver: #dddddd!default;
+$colorGray: #aaaaaa!default;
+$colorBlack: #111111!default;
+
+

@@ -1,0 +1,45 @@
+@if $buttonObject {
+/**
+ * _bottons.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <a class="button [button--secondary]" href="#">Button</a>
+ * <input type="text" class="button">
+ * <button class="button">Button</button>
+ */
+
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  line-height: $baseLineHeight*2;
+  @include display-inline-block;
+  margin: 0;
+
+  /* Cosmetics */
+  padding: 0em $baseUnit;
+  color: #fff;
+  font-weight: bold;
+  background-color: $colorLink;
+}
+
+.button:hover{
+  background-color: $colorLinkHover;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button--secondary,
+.button--secondary:visited {
+  background: none;
+  color: inherit;
+}
+
+.button--secondary:hover {
+  background: #eee;
+  color: $colorLinkHover;
+}
+
+}//@if

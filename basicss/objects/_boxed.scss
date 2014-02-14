@@ -1,0 +1,49 @@
+@if $prototyping {
+  $boxedObject: true;
+  $baseline: true;
+}
+
+@if $boxedObject {
+/**
+ * _boxed.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+
+.boxed {
+  background: rgba($colorBlack,.1);
+  @include px-to-rem(padding, $baseUnit);
+  * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include px-to-rem(margin-bottom, $baseUnit);
+}
+
+}//@if $boxedObject
+
+@if $prototyping {
+
+/**
+ * .boxed prototyping stylezzz
+ */
+
+.boxed {
+  border: 1px solid $colorWhite;
+  text-align: center;
+  @include px-to-rem(margin-bottom, $baseUnit - 2);
+  background: rgba($colorWhite,.3);
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.boxed--small  { @include px-to-rem(line-height, 2 * $baseLineHeight);}
+.boxed--medium { line-height: 4 * $baseLineHeight; line-height: toRem(4 * $baseLineHeight);}
+.boxed--large  { line-height: 8 * $baseLineHeight; line-height: toRem(8 * $baseLineHeight);}
+
+}//@if $prototyping

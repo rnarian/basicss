@@ -1,0 +1,16 @@
+/**
+ * _background-svg.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * .element {
+ *   @include display-inline-block;
+ * }
+ *
+ */
+
+@mixin display-inline-block {
+  display: inline-block;
+  *zoom: 1; *display: inline; /* IE 7 */
+}

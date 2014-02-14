@@ -1,0 +1,49 @@
+/**
+ * _media.scss
+ *
+ * Author: Marius Scheel
+ *
+ * Usage:
+ * @include media(300px);
+ * or @include media(300px, false);
+ * or @include media(max-width 300px);
+ * or @include media(100px max-width 300px);
+ * or @include media(max-width 100px max-width 300px);
+ * or @include media(max-width 100px max-width 300px, true);
+ *
+ */
+
+$default-feature: min-width; // Standard Fallback auf min-width
+
+@mixin media($query:$feature $value, $serveToOldIE: false) {
+
+  @if length($query) == 1 {
+    @media screen and ($default-feature: nth($query, 1)) {
+      @content;
+    }
+  }
+
+  @else if length($query) == 2 {
+    @media screen and (nth($query, 1): nth($query, 2)) {
+      @content;
+    }
+  }
+
+  @else if length($query) == 3 {
+    @media screen and ($default-feature: nth($query, 1)) and (nth($query, 2): nth($query, 3))  {
+      @content;
+    }
+  }
+
+  @else if length($query) == 4 {
+    @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4))  {
+      @content;
+    }
+  }
+
+  @if $serveToOldIE {
+    .lt-ie9 & {
+      @content;
+    }
+  }
+}

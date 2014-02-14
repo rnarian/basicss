@@ -1,0 +1,56 @@
+@if $gridObject {
+$widthHelper: true;
+/**
+ * _grid.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="grid">
+ *   <div class="grid__item  width--1of1  width-tab--1of3  width-desk--1of4">
+ *     <div class="grid__inner">
+ *       ...
+ *     </div>
+ *   </div>
+ *   <div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
+ *     <div class="grid">
+ *       <div class="grid__item  width--1of1  width-tab--1of2">
+ *         <div class="grid__inner">
+ *           ...
+ *         </div>
+ *       </div>
+ *       <div class="grid__item  width--1of1  width-tab--1of2">
+ *         <div class="grid__inner">
+ *           ...
+ *         </div>
+ *       </div>
+ *     </div>
+ *   </div>
+ * </div>
+ *
+ * See also: together with helper/_width.scss
+ */
+
+.grid {
+  @include clearfix;
+}
+
+.grid--rev {
+  direction: rtl;
+  .grid__item {
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+.grid__item {
+  @include display-inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.grid__inner {
+  padding: 0 $baseUnit/2;
+}
+
+}//@if

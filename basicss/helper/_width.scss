@@ -1,0 +1,67 @@
+@mixin widths($scope: '') {
+  @if $scope != '' { $scope: -#{$scope}; }
+
+  .width#{$scope}--0    { width: 0%;}
+
+  .width#{$scope}--1of1,
+  .width#{$scope}--2of2,
+  .width#{$scope}--3of3,
+  .width#{$scope}--4of4,
+  .width#{$scope}--5of5,
+  .width#{$scope}--6of6, { width: 100%; }
+
+  .width#{$scope}--1of2,
+  .width#{$scope}--2of4,
+  .width#{$scope}--3of6 { width: 50%; }
+
+  .width#{$scope}--1of3,
+  .width#{$scope}--2of6 { width: 33.33333%; }
+
+  .width#{$scope}--2of3,
+  .width#{$scope}--4of6 { width: 66.66666%; }
+
+  .width#{$scope}--1of4 { width: 25%; }
+  .width#{$scope}--3of4 { width: 75%; }
+
+  .width#{$scope}--1of5 { width: 20%; }
+  .width#{$scope}--2of5 { width: 40%; }
+  .width#{$scope}--3of5 { width: 60%; }
+  .width#{$scope}--4of5 { width: 80%; }
+
+  .width#{$scope}--1of6 { width: 16.66666%; }
+  .width#{$scope}--5of6 { width: 83.33333%; }
+}
+
+@if $widthHelper {
+/**
+ * _width.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="grid">
+ *   <div class="grid__item  width--1of1  width-tab--1of3  width-desk--1of4">
+ *     ...
+ *   </div>
+ *   <div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
+ *     ...
+ *   </div>
+ * </div>
+ *
+ */
+
+@include widths();
+
+@include media($breakTablet) {
+  @include widths('tab');
+}
+
+@include media($breakDesktop) {
+  @include widths('desk');
+}
+
+@include media($breakDesktopWide) {
+  @include widths('desk-wide');
+}
+
+}//@if

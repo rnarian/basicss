@@ -1,0 +1,22 @@
+/**
+ * media-src.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+
+object,
+embed,
+video,
+img {
+  max-width:100%;
+  height:auto;
+  margin-bottom: .75em;
+}
+
+img {
+  /**
+   * Give it some text styles to offset alt text
+   */
+  color:#c00;
+}

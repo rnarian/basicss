@@ -1,0 +1,69 @@
+@mixin text($scope: '') {
+  @if $scope != '' { $scope: -#{$scope}; }
+
+  .text#{$scope}--left   { text-align: left; }
+  .text#{$scope}--right  { text-align: right; }
+  .text#{$scope}--center { text-align: center; }
+}
+
+@if $typoHelper {
+/**
+ * _typo.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Alt Text Styles.
+ *
+ * - text--large
+ * - text--small
+ * - text--serif
+ * - text--right
+ * - text--center
+ *
+ * Usage:
+ * <div class="text--large">
+ *   <h1>Lorem Ipsum</h1>
+ *   <p>Lorem ipsum</p>
+ * </div>
+ *
+ */
+
+.text--large {
+  h1, h2 {
+    @include font-size(96px);
+    margin: 0 0 $baseUnit;
+    margin: 0 0 toRem($baseUnit);
+  }
+  p, ul, ol {
+    @include font-size(48px);
+    margin: 0 0 $baseUnit;
+    margin: 0 0 toRem($baseUnit);
+  }
+  margin-bottom: $baseUnit*3;
+  margin-bottom: toRem($baseUnit*3);
+}
+
+.text--small {
+  h1, h2 {
+    @include font-size(14px);
+    margin: 0 0 0;
+  }
+  p, ul, ol {
+    @include font-size(12px);
+    margin: 0 0 $baseUnit;
+    margin: 0 0 toRem($baseUnit);
+  }
+}
+
+.text--serif {
+  p, ul, ol, h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+  }
+}
+
+@include text();
+@include media($breakTablet)      { @include text('tab'); }
+@include media($breakDesktop)     { @include text('desk'); }
+@include media($breakDesktopWide) { @include text('desk-wide'); }
+
+}//@if

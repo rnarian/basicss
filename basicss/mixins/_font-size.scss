@@ -1,0 +1,14 @@
+/**
+ * _font-size.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+
+@mixin font-size($fontSize, $lineHeight:true){
+    font-size:$fontSize;
+    font-size:($fontSize / $baseFontSize)*1rem;
+    @if $lineHeight == true {
+      line-height:ceil($fontSize / $baseLineHeight) * ($baseLineHeight / $fontSize);
+    }
+}

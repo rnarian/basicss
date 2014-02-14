@@ -1,0 +1,131 @@
+@if $navObject {
+/**
+ * _nav.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Quelle: Nav abstraction von csswizardry.com/2011/09/the-nav-abstraction
+ *
+ * Kann auf 'ol's und 'ul's angewendet werden und sorgt dafür,
+ * dass die Liste horizontal dargestellt wird und kann durch folgende
+ * Zusatzklassen erweitert werden:
+ *
+ * - nav--stacked    // Stellt die Liste Vertikal dar
+ * - nav--banner     // Zentriert die Liste
+ * - nav--block      // Gibt den Links mehr Padding / mehr Fläche zum klicken
+ * - nav--fit        // Zwingt die Navigation die komplette Breite an Platz einzunehmen
+ * - nav--keywords   // Darstellung als Keywordliste
+ * - nav--breadcrumb // Darstellung als Breadcrumbnav
+ *
+ * Markup:
+ *
+ * <ul class="nav">
+ *   <li><a href=#>Home</a></li>
+ *   <li><a href=#>About</a></li>
+ *   <li><a href=#>Portfolio</a></li>
+ *   <li><a href=#>Contact</a></li>
+ * </ul>
+ */
+
+.nav {
+  list-style: none;
+  padding: 0;
+  @include px-to-rem(margin, 0 0 $baseUnit 0);
+  @include clearfix;
+  > li {
+    &,
+    > a {
+      @include display-inline-block;
+    }
+  }
+}
+
+/**
+ * 'nav-stacked' stellt die Liste Vertikal dar
+ */
+
+.nav--stacked {
+  > li {
+    display: list-item;
+    > a {
+      display: block;
+    }
+  }
+}
+
+/**
+ * 'nav-banner' zentriert die Liste
+ */
+
+.nav--banner {
+  text-align: center;
+}
+
+/**
+ * 'nav--block' gibt der Liste mehr padding
+ */
+
+.nav--block {
+  //line-height:1;
+  /* Unnötigen Whitespace entfernen!! */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap;
+  > li {
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    > a {
+      padding: .75em;
+      line-height: 1.5em;
+    }
+  }
+}
+
+/**
+ * 'nav--fit' zwingt die Navigation die komplette Breite an Platz einzunehmen
+ */
+
+.nav--fit {
+  display: table;
+  width: 100%;
+  > li {
+    display:table-cell;
+    text-align: center;
+    > a {
+      display:block;
+    }
+  }
+}
+
+/**
+ * 'nav--keywords' stellt die Liste als Keywordliste dar
+ */
+
+.nav--keywords {
+  > li {
+    &:after {
+      content: "\002C" "\00A0";
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+}
+
+/**
+ * 'nav--breadcrumbs' stellt die Liste als Breadcrumbnav dar
+ */
+
+.nav--breadcrumbs {
+  > li {
+    &:before {
+        content: "\27E9" "\00A0";
+    }
+    &:first-child:before{
+      display: none;
+    }
+  }
+}
+
+}//@if

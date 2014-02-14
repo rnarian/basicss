@@ -1,0 +1,46 @@
+@mixin space($multiplier: 1, $name: '', $scope: '') {
+  @if $scope != '' { $scope: -#{$scope}; }
+  @if $name  != '' { $name: -#{$name}; }
+
+  .space#{$scope}--top#{$name}    { margin-top:    $baseUnit * $multiplier; margin-top:    toRem($baseUnit * $multiplier);}
+  .space#{$scope}--left#{$name}   { margin-left:   $baseUnit * $multiplier; margin-left:   toRem($baseUnit * $multiplier);}
+  .space#{$scope}--right#{$name}  { margin-right:  $baseUnit * $multiplier; margin-right:  toRem($baseUnit * $multiplier);}
+  .space#{$scope}--bottom#{$name} { margin-bottom: $baseUnit * $multiplier; margin-bottom: toRem($baseUnit * $multiplier);}
+}
+
+@if $spacingHelper {
+/**
+ * _spacing.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="space--top  space-tab--top-double">
+ *   ...
+ * </div>
+ *
+ */
+
+/**
+ * Basic & spacing
+ */
+
+@include space(1, '');
+@include space(2, 'double');
+
+@include media($breakTablet) {
+  @include space(1, '', 'tab');
+  @include space(2, 'double', 'tab');
+}
+
+@include media($breakDesktop) {
+  @include space(1, '', 'desk');
+  @include space(2, 'double', 'desk');
+}
+
+@include media($breakDesktopWide) {
+  @include space(1, '', 'desk-wide');
+  @include space(2, 'double', 'desk-wide');
+}
+
+}//@if
