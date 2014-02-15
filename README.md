@@ -8,9 +8,9 @@ Base styles I've been using recently...
 
 Install with [bower](http://bower.io):
 
-    bower install --save basicss
+`bower install --save basicss`
 
-`style.scss` should look something like this:
+**style.scss** should look something like this:
 
     /**
      * style.scss
