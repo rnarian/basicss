@@ -1,0 +1,29 @@
+/**
+ * _hdpi.scss
+ *
+ * Author: Marius Scheel
+ *
+ * defaults to 1.3 to include Google Nexus 7
+ * adapted from bourbon:
+ * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_hidpi-media-query.scss
+ * 
+ * Usage:
+ * @include hdpi {
+ *  // your css for hdpi displays
+ * };
+ *
+ * you can use a custom ratio, if you like:
+ * @include hdpi(1.5) {
+ *  // your css
+ * };
+ */
+
+@mixin hdpi($ratio: 1.3) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-resolution: #{round($ratio*96)}dpi),
+  only screen and (min-resolution: #{$ratio}dppx) {
+    @content;
+  }
+}
