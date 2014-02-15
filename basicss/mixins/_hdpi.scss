@@ -3,7 +3,7 @@
  *
  * Author: Marius Scheel
  *
- * HDPI Mixin - defaults to 1.3 to include Google Nexus 7
+ * defaults to 1.3 to include Google Nexus 7
  * adapted from bourbon:
  * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_hidpi-media-query.scss
  * 
@@ -12,7 +12,7 @@
  *  // your css for hdpi displays
  * };
  *
- * you can use a custom ratio like
+ * you can use a custom ratio, if you like:
  * @include hdpi(1.5) {
  *  // your css
  * };

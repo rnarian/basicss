@@ -6,8 +6,10 @@
  * Usage:
  * .hero {
  *  @include retina-image("../path/to/hero", 200px 400px);
+ * }
  *
- *  // to use a specific filename:
+ * to use a specific filename:
+ * .hero {
  *  @include retina-image("../path/to/hero", 200px 400px, "../path/to/retina-hero"); 
  * } 
  *
