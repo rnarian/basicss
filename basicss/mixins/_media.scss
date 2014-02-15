@@ -13,7 +13,7 @@
  *
  */
 
-$default-feature: min-width; // Standard Fallback auf min-width
+$default-feature: min-width;
 
 @mixin media($query:$feature $value, $serveToOldIE: false) {
 

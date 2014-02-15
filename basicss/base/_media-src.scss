@@ -9,14 +9,13 @@ object,
 embed,
 video,
 img {
-  max-width:100%;
-  height:auto;
-  margin-bottom: .75em;
+  max-width: 100%;
+  height: auto;
 }
 
 img {
   /**
    * Give it some text styles to offset alt text
    */
-  color:#c00;
+  color: #c00;
 }
