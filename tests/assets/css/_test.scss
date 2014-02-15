@@ -1,0 +1,13 @@
+.wrapper {
+  @include px-to-rem(max-width, $breakDesktop);
+  margin: 0 auto;
+  @include px-to-rem(padding, 0 $baseUnit/2);
+}
+
+.nav--fit {
+  @include media(max-width $breakTablet - 1) {
+    li {
+      display: block;
+    }
+  }
+}

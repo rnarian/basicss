@@ -1,0 +1,1686 @@
+@charset "UTF-8";
+/**
+ * style.scss
+ */
+/**
+ * basicss overrides
+ *
+ * any defaults in basicss/basicss/_settings.scss
+ * may be overridden...
+ */
+/**
+ * basicss
+ */
+/**
+ * basicss.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+/* ====================================================
+   Reset, Defaults, Mixins
+   ==================================================== */
+/**
+ * Reset, Default settings
+ */
+/* ==========================================================================
+   Normalize.scss settings
+   ========================================================================== */
+/**
+ * Includes legacy browser support IE6/7
+ *
+ * Set to false if you want to drop support for IE6 and IE7
+ */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ * 3.Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/**
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Addresses styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Addresses margins set differently in IE 6/7.
+ */
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ *  Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 8/9.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 7/8/9/10.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * _settings.scss
+ *
+ * Author: Marian Friedmann
+ */
+/**
+ * Various defaults
+ */
+/**
+ * Default objects
+ */
+/**
+ * Default helper
+ */
+/**
+ * Default fonts
+ */
+/**
+ * Default font size
+ */
+/**
+ *  Default spacing
+ */
+/**
+ * Default breakpoints
+ */
+/**
+ * Arrows
+ */
+/**
+ * Default colors
+ *
+ * Basic values from colors.css v1.0
+ * http://clrs.cc
+ */
+/**
+ * Mixins
+ */
+/**
+ * _media.scss
+ *
+ * Author: Marius Scheel
+ *
+ * Usage:
+ * @include media(300px);
+ * or @include media(300px, false);
+ * or @include media(max-width 300px);
+ * or @include media(100px max-width 300px);
+ * or @include media(max-width 100px max-width 300px);
+ * or @include media(max-width 100px max-width 300px, true);
+ *
+ */
+/**
+ * _background-svg.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * SVG als Hintergrundgrafik mit PNG Fallback.
+ *
+ * Usage:
+ * .element {
+ *   @include background-svg(../pfad/zum/bild/bildname); // ohne dateiendung
+ * }
+ *
+ */
+/**
+ * _display-inline-block.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * .element {
+ *   @include display-inline-block;
+ * }
+ *
+ */
+/**
+ * _font-size.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+/**
+ * _px-to-rem.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * .element {
+ *   @include px-to-rem(padding, 0 24px)
+ * }
+ *
+ * Output:
+ * .element {
+ *   padding: 0 24px;
+ *   padding: 0 1.5rem;
+ * }
+ *
+ */
+.element {
+  padding: 0 24px;
+  padding: 0 1.5rem;
+  margin: 0 24px 0 24px;
+  margin: 0 1.5rem 0 1.5rem;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+/**
+ * _clearfix.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * .element {
+ *   @include clearfix;
+ * }
+ *
+ */
+/**
+ * _mixins.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Various mixins
+ *
+ */
+/**
+ * ellipsis...
+ */
+/* ====================================================
+   Base Styles
+   ==================================================== */
+/**
+ * _main.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+}
+
+/**
+ * _baseline-font.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+
+h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.71429;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+
+h3, h4, h5, h6 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.09091;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+
+/**
+ * _links.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0059a6;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+/**
+ * media-src.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+object,
+embed,
+video,
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  /**
+   * Give it some text styles to offset alt text
+   */
+  color: #c00;
+}
+
+/* ====================================================
+   Objects
+   ==================================================== */
+/**
+ * _grid.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="grid">
+ *   <div class="grid__item  width--1of1  width-tab--1of3  width-desk--1of4">
+ *     <div class="grid__inner">
+ *       ...
+ *     </div>
+ *   </div>
+ *   <div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
+ *     <div class="grid">
+ *       <div class="grid__item  width--1of1  width-tab--1of2">
+ *         <div class="grid__inner">
+ *           ...
+ *         </div>
+ *       </div>
+ *       <div class="grid__item  width--1of1  width-tab--1of2">
+ *         <div class="grid__inner">
+ *           ...
+ *         </div>
+ *       </div>
+ *     </div>
+ *   </div>
+ * </div>
+ *
+ * the example above combines the grid items with the widths from helper/_width.scss
+ */
+.grid {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  *zoom: 1;
+}
+.grid:before, .grid:after {
+  content: " ";
+  display: table;
+}
+.grid:after {
+  clear: both;
+}
+
+.grid--rev {
+  direction: rtl;
+}
+.grid--rev .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
+.grid__item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  /* IE 7 */
+  vertical-align: top;
+  width: 100%;
+}
+
+.grid__inner {
+  padding: 0 12px;
+}
+
+/**
+ * _buttons.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <a class="button [button--secondary]" href="#">Button</a>
+ * <input type="text" class="button">
+ * <button class="button">Button</button>
+ */
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  line-height: 48px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  /* IE 7 */
+  margin: 0;
+  /* Cosmetics */
+  padding: 0em 24px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #0074d9;
+}
+
+.button:hover {
+  background-color: #0059a6;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button--secondary,
+.button--secondary:visited {
+  background: none;
+  color: inherit;
+}
+
+.button--secondary:hover {
+  background: #eee;
+  color: #0059a6;
+}
+
+/**
+ * _nav.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * source: Nav abstraction from csswizardry.com/2011/09/the-nav-abstraction
+ *
+ * Can be used on an `ol` or `ul` and displays the list items horizontally.
+ * Extend it with the following subclasses:
+ *
+ * - nav--stacked    // displays the list items vertically
+ * - nav--banner     // centres the list
+ * - nav--block      // expands list items clickable areas
+ * - nav--fit        // forces the list to occupy the full width of its parent
+ * - nav--keywords   // display as a list of keywords
+ * - nav--breadcrumb // display as breadcrumbs
+ *
+ * Markup:
+ *
+ * <ul class="nav">
+ *   <li><a href=#>Home</a></li>
+ *   <li><a href=#>About</a></li>
+ *   <li><a href=#>Portfolio</a></li>
+ *   <li><a href=#>Contact</a></li>
+ * </ul>
+ */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  margin: 0 0 1.5rem 0;
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  *zoom: 1;
+}
+.nav:before, .nav:after {
+  content: " ";
+  display: table;
+}
+.nav:after {
+  clear: both;
+}
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  /* IE 7 */
+}
+
+/**
+ * 'nav-stacked' displays the list items vertically
+ */
+.nav--stacked > li {
+  display: list-item;
+}
+.nav--stacked > li > a {
+  display: block;
+}
+
+/**
+ * 'nav-banner' centres the list
+ */
+.nav--banner {
+  text-align: center;
+}
+
+/**
+ * 'nav--block' expands list items clickable areas with padding
+ */
+.nav--block {
+  /* removes unnecessary whitespace */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap;
+}
+.nav--block > li {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: center;
+}
+.nav--block > li > a {
+  padding: .75em;
+  line-height: 1.5em;
+}
+
+/**
+ * 'nav--fit' forces the list to occupy the full width of its parent
+ */
+.nav--fit {
+  display: table;
+  width: 100%;
+}
+.nav--fit > li {
+  display: table-cell;
+  text-align: center;
+}
+.nav--fit > li > a {
+  display: block;
+}
+
+/**
+ * 'nav--keywords' display as a list of keywords
+ */
+.nav--keywords > li:after {
+  content: "\002C" "\00A0";
+}
+.nav--keywords > li:last-child:after {
+  display: none;
+}
+
+/**
+ * 'nav--breadcrumbs' display as breadcrumbs
+ */
+.nav--breadcrumbs > li:before {
+  content: "\27E9" "\00A0";
+}
+.nav--breadcrumbs > li:first-child:before {
+  display: none;
+}
+
+/**
+ * _boxed.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+.boxed {
+  background: rgba(17, 17, 17, 0.1);
+  padding: 24px;
+  padding: 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.boxed *:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * .boxed prototyping stylezzz
+ */
+.boxed {
+  border: 1px solid white;
+  text-align: center;
+  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.boxed a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.boxed--small {
+  line-height: 48px;
+  line-height: 3rem;
+}
+
+.boxed--medium {
+  line-height: 96px;
+  line-height: 6rem;
+}
+
+.boxed--large {
+  line-height: 192px;
+  line-height: 12rem;
+}
+
+/**
+ * _arrow.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="arrow arrow--top-left">
+ *  ...
+ * </div>
+ *
+ */
+.arrow {
+  position: relative;
+}
+.arrow:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+/**
+ * Arrow Top
+ */
+.arrow--top:before,
+.arrow--top-left:before,
+.arrow--top-right:before {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid white;
+  top: -20px;
+}
+
+.arrow--top:before {
+  left: 50%;
+  margin-left: -20px;
+}
+
+.arrow--top-left:before {
+  left: 24px;
+  left: 1.5rem;
+}
+
+.arrow--top-right:before {
+  right: 24px;
+  right: 1.5rem;
+}
+
+/**
+ * Arrow Bottom
+ */
+.arrow--bottom:before,
+.arrow--bottom-left:before,
+.arrow--bottom-right:before {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  bottom: -20px;
+}
+
+.arrow--bottom:before {
+  left: 50%;
+  margin-left: -20px;
+}
+
+.arrow--bottom-left:before {
+  left: 24px;
+  left: 1.5rem;
+}
+
+.arrow--bottom-right:before {
+  right: 24px;
+  right: 1.5rem;
+}
+
+/**
+ * Arrow Left
+ */
+.arrow--left:before,
+.arrow--left-top:before,
+.arrow--left-bottom:before {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
+  left: -20px;
+}
+
+.arrow--left:before {
+  top: 50%;
+  margin-top: -20px;
+}
+
+.arrow--left-top:before {
+  top: 24px;
+  top: 1.5rem;
+}
+
+.arrow--left-bottom:before {
+  bottom: 24px;
+  bottom: 1.5rem;
+}
+
+/**
+ * Arrow Right
+ */
+.arrow--right:before,
+.arrow--right-top:before,
+.arrow--right-bottom:before {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid white;
+  right: -20px;
+}
+
+.arrow--right:before {
+  top: 50%;
+  margin-top: -20px;
+}
+
+.arrow--right-top:before {
+  top: 24px;
+  top: 1.5rem;
+}
+
+.arrow--right-bottom:before {
+  bottom: 24px;
+  bottom: 1.5rem;
+}
+
+/**
+ * _icon.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <i class="icon [icon--nav-toggle]"></i>
+ *
+ */
+/**
+ * Alle icons werden als .svg exportiert unter
+ * /assets/images/icons abgelegt und von grunt-svgmin
+ * und grunt-grunticon weiterverarbeitet.
+ *
+ * Output unter /assets/images/icons/grunticon
+ */
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  /* IE 7 */
+}
+
+/**
+ * Beispiel für ein Icon
+ *
+ * .icon--mobile-nav-toggle {
+ *   @include background-svg("../images/nav-toggle");
+ * }
+ */
+/* ====================================================
+   Helper Classes
+   ==================================================== */
+/**
+ * _spacing.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="space--top  space-tab--top-double">
+ *   ...
+ * </div>
+ *
+ */
+/**
+ * Basic & spacing
+ */
+.space--top {
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+.space--left {
+  margin-left: 24px;
+  margin-left: 1.5rem;
+}
+
+.space--right {
+  margin-right: 24px;
+  margin-right: 1.5rem;
+}
+
+.space--bottom {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.space--top-double {
+  margin-top: 48px;
+  margin-top: 3rem;
+}
+
+.space--left-double {
+  margin-left: 48px;
+  margin-left: 3rem;
+}
+
+.space--right-double {
+  margin-right: 48px;
+  margin-right: 3rem;
+}
+
+.space--bottom-double {
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 481px) {
+  .space-tab--top {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+  }
+
+  .space-tab--left {
+    margin-left: 24px;
+    margin-left: 1.5rem;
+  }
+
+  .space-tab--right {
+    margin-right: 24px;
+    margin-right: 1.5rem;
+  }
+
+  .space-tab--bottom {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .space-tab--top-double {
+    margin-top: 48px;
+    margin-top: 3rem;
+  }
+
+  .space-tab--left-double {
+    margin-left: 48px;
+    margin-left: 3rem;
+  }
+
+  .space-tab--right-double {
+    margin-right: 48px;
+    margin-right: 3rem;
+  }
+
+  .space-tab--bottom-double {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .space-desk--top {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+  }
+
+  .space-desk--left {
+    margin-left: 24px;
+    margin-left: 1.5rem;
+  }
+
+  .space-desk--right {
+    margin-right: 24px;
+    margin-right: 1.5rem;
+  }
+
+  .space-desk--bottom {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .space-desk--top-double {
+    margin-top: 48px;
+    margin-top: 3rem;
+  }
+
+  .space-desk--left-double {
+    margin-left: 48px;
+    margin-left: 3rem;
+  }
+
+  .space-desk--right-double {
+    margin-right: 48px;
+    margin-right: 3rem;
+  }
+
+  .space-desk--bottom-double {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .space-desk-wide--top {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+  }
+
+  .space-desk-wide--left {
+    margin-left: 24px;
+    margin-left: 1.5rem;
+  }
+
+  .space-desk-wide--right {
+    margin-right: 24px;
+    margin-right: 1.5rem;
+  }
+
+  .space-desk-wide--bottom {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .space-desk-wide--top-double {
+    margin-top: 48px;
+    margin-top: 3rem;
+  }
+
+  .space-desk-wide--left-double {
+    margin-left: 48px;
+    margin-left: 3rem;
+  }
+
+  .space-desk-wide--right-double {
+    margin-right: 48px;
+    margin-right: 3rem;
+  }
+
+  .space-desk-wide--bottom-double {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+  }
+}
+/**
+ * _width.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Usage:
+ * <div class="grid">
+ *   <div class="grid__item  width--1of1  width-tab--1of3  width-desk--1of4">
+ *     ...
+ *   </div>
+ *   <div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
+ *     ...
+ *   </div>
+ * </div>
+ *
+ */
+.width--0 {
+  width: 0%;
+}
+
+.width--1of1,
+.width--2of2,
+.width--3of3,
+.width--4of4,
+.width--5of5,
+.width--6of6 {
+  width: 100%;
+}
+
+.width--1of2,
+.width--2of4,
+.width--3of6 {
+  width: 50%;
+}
+
+.width--1of3,
+.width--2of6 {
+  width: 33.33333%;
+}
+
+.width--2of3,
+.width--4of6 {
+  width: 66.66666%;
+}
+
+.width--1of4 {
+  width: 25%;
+}
+
+.width--3of4 {
+  width: 75%;
+}
+
+.width--1of5 {
+  width: 20%;
+}
+
+.width--2of5 {
+  width: 40%;
+}
+
+.width--3of5 {
+  width: 60%;
+}
+
+.width--4of5 {
+  width: 80%;
+}
+
+.width--1of6 {
+  width: 16.66666%;
+}
+
+.width--5of6 {
+  width: 83.33333%;
+}
+
+@media screen and (min-width: 481px) {
+  .width-tab--0 {
+    width: 0%;
+  }
+
+  .width-tab--1of1,
+  .width-tab--2of2,
+  .width-tab--3of3,
+  .width-tab--4of4,
+  .width-tab--5of5,
+  .width-tab--6of6 {
+    width: 100%;
+  }
+
+  .width-tab--1of2,
+  .width-tab--2of4,
+  .width-tab--3of6 {
+    width: 50%;
+  }
+
+  .width-tab--1of3,
+  .width-tab--2of6 {
+    width: 33.33333%;
+  }
+
+  .width-tab--2of3,
+  .width-tab--4of6 {
+    width: 66.66666%;
+  }
+
+  .width-tab--1of4 {
+    width: 25%;
+  }
+
+  .width-tab--3of4 {
+    width: 75%;
+  }
+
+  .width-tab--1of5 {
+    width: 20%;
+  }
+
+  .width-tab--2of5 {
+    width: 40%;
+  }
+
+  .width-tab--3of5 {
+    width: 60%;
+  }
+
+  .width-tab--4of5 {
+    width: 80%;
+  }
+
+  .width-tab--1of6 {
+    width: 16.66666%;
+  }
+
+  .width-tab--5of6 {
+    width: 83.33333%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .width-desk--0 {
+    width: 0%;
+  }
+
+  .width-desk--1of1,
+  .width-desk--2of2,
+  .width-desk--3of3,
+  .width-desk--4of4,
+  .width-desk--5of5,
+  .width-desk--6of6 {
+    width: 100%;
+  }
+
+  .width-desk--1of2,
+  .width-desk--2of4,
+  .width-desk--3of6 {
+    width: 50%;
+  }
+
+  .width-desk--1of3,
+  .width-desk--2of6 {
+    width: 33.33333%;
+  }
+
+  .width-desk--2of3,
+  .width-desk--4of6 {
+    width: 66.66666%;
+  }
+
+  .width-desk--1of4 {
+    width: 25%;
+  }
+
+  .width-desk--3of4 {
+    width: 75%;
+  }
+
+  .width-desk--1of5 {
+    width: 20%;
+  }
+
+  .width-desk--2of5 {
+    width: 40%;
+  }
+
+  .width-desk--3of5 {
+    width: 60%;
+  }
+
+  .width-desk--4of5 {
+    width: 80%;
+  }
+
+  .width-desk--1of6 {
+    width: 16.66666%;
+  }
+
+  .width-desk--5of6 {
+    width: 83.33333%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .width-desk-wide--0 {
+    width: 0%;
+  }
+
+  .width-desk-wide--1of1,
+  .width-desk-wide--2of2,
+  .width-desk-wide--3of3,
+  .width-desk-wide--4of4,
+  .width-desk-wide--5of5,
+  .width-desk-wide--6of6 {
+    width: 100%;
+  }
+
+  .width-desk-wide--1of2,
+  .width-desk-wide--2of4,
+  .width-desk-wide--3of6 {
+    width: 50%;
+  }
+
+  .width-desk-wide--1of3,
+  .width-desk-wide--2of6 {
+    width: 33.33333%;
+  }
+
+  .width-desk-wide--2of3,
+  .width-desk-wide--4of6 {
+    width: 66.66666%;
+  }
+
+  .width-desk-wide--1of4 {
+    width: 25%;
+  }
+
+  .width-desk-wide--3of4 {
+    width: 75%;
+  }
+
+  .width-desk-wide--1of5 {
+    width: 20%;
+  }
+
+  .width-desk-wide--2of5 {
+    width: 40%;
+  }
+
+  .width-desk-wide--3of5 {
+    width: 60%;
+  }
+
+  .width-desk-wide--4of5 {
+    width: 80%;
+  }
+
+  .width-desk-wide--1of6 {
+    width: 16.66666%;
+  }
+
+  .width-desk-wide--5of6 {
+    width: 83.33333%;
+  }
+}
+/**
+ * _typo.scss
+ *
+ * Author: Marian Friedmann
+ *
+ * Alt Text Styles.
+ *
+ * - text--large
+ * - text--small
+ * - text--serif
+ * - text--right
+ * - text--center
+ *
+ * Usage:
+ * <div class="text--large">
+ *   <h1>Lorem Ipsum</h1>
+ *   <p>Lorem ipsum</p>
+ * </div>
+ *
+ */
+.text--large {
+  margin-bottom: 72px;
+  margin-bottom: 4.5rem;
+}
+.text--large h1, .text--large h2 {
+  font-size: 96px;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+.text--large p, .text--large ul, .text--large ol {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+
+.text--small h1, .text--small h2 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  margin: 0 0 0;
+}
+.text--small p, .text--small ul, .text--small ol {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
+  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
+}
+
+.text--serif p, .text--serif ul, .text--serif ol, .text--serif h1, .text--serif h2, .text--serif h3, .text--serif h4, .text--serif h5, .text--serif h6 {
+  font-family: Georgia, serif;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--center {
+  text-align: center;
+}
+
+@media screen and (min-width: 481px) {
+  .text-tab--left {
+    text-align: left;
+  }
+
+  .text-tab--right {
+    text-align: right;
+  }
+
+  .text-tab--center {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-desk--left {
+    text-align: left;
+  }
+
+  .text-desk--right {
+    text-align: right;
+  }
+
+  .text-desk--center {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text-desk-wide--left {
+    text-align: left;
+  }
+
+  .text-desk-wide--right {
+    text-align: right;
+  }
+
+  .text-desk-wide--center {
+    text-align: center;
+  }
+}
+/* Baseline Grid */
+body {
+  background: #0074d9;
+  color: white;
+  background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 50.1%, rgba(255, 255, 255, 0) 55%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50.1%, rgba(255, 255, 255, 0) 55%);
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 50.1%, rgba(255, 255, 255, 0) 55%), linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50.1%, rgba(255, 255, 255, 0) 55%);
+  background-size: 1.5rem 1.5rem;
+}
+body a {
+  color: #dddddd !important;
+  opacity: .7;
+}
+
+/**
+ * userstyles
+ */
+.wrapper {
+  max-width: 1024px;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 12px;
+  padding: 0 0.75rem;
+}
+
+@media screen and (max-width: 480px) {
+  .nav--fit li {
+    display: block;
+  }
+}
