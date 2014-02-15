@@ -4,18 +4,17 @@
  *
  * Author: Marian Friedmann
  *
- * Quelle: Nav abstraction von csswizardry.com/2011/09/the-nav-abstraction
+ * source: Nav abstraction from csswizardry.com/2011/09/the-nav-abstraction
  *
- * Kann auf 'ol's und 'ul's angewendet werden und sorgt dafür,
- * dass die Liste horizontal dargestellt wird und kann durch folgende
- * Zusatzklassen erweitert werden:
+ * Can be used on an `ol` or `ul` and displays the list items horizontally.
+ * Extend it with the following subclasses:
  *
- * - nav--stacked    // Stellt die Liste Vertikal dar
- * - nav--banner     // Zentriert die Liste
- * - nav--block      // Gibt den Links mehr Padding / mehr Fläche zum klicken
- * - nav--fit        // Zwingt die Navigation die komplette Breite an Platz einzunehmen
- * - nav--keywords   // Darstellung als Keywordliste
- * - nav--breadcrumb // Darstellung als Breadcrumbnav
+ * - nav--stacked    // displays the list items vertically
+ * - nav--banner     // centres the list
+ * - nav--block      // expands list items clickable areas
+ * - nav--fit        // forces the list to occupy the full width of its parent
+ * - nav--keywords   // display as a list of keywords
+ * - nav--breadcrumb // display as breadcrumbs
  *
  * Markup:
  *
@@ -41,7 +40,7 @@
 }
 
 /**
- * 'nav-stacked' stellt die Liste Vertikal dar
+ * 'nav-stacked' displays the list items vertically
  */
 
 .nav--stacked {
@@ -54,7 +53,7 @@
 }
 
 /**
- * 'nav-banner' zentriert die Liste
+ * 'nav-banner' centres the list
  */
 
 .nav--banner {
@@ -62,12 +61,12 @@
 }
 
 /**
- * 'nav--block' gibt der Liste mehr padding
+ * 'nav--block' expands list items clickable areas with padding
  */
 
 .nav--block {
   //line-height:1;
-  /* Unnötigen Whitespace entfernen!! */
+  /* removes unnecessary whitespace */
   letter-spacing: -0.31em;
   word-spacing: -0.43em;
   white-space: nowrap;
@@ -83,7 +82,7 @@
 }
 
 /**
- * 'nav--fit' zwingt die Navigation die komplette Breite an Platz einzunehmen
+ * 'nav--fit' forces the list to occupy the full width of its parent
  */
 
 .nav--fit {
@@ -99,7 +98,7 @@
 }
 
 /**
- * 'nav--keywords' stellt die Liste als Keywordliste dar
+ * 'nav--keywords' display as a list of keywords
  */
 
 .nav--keywords {
@@ -114,7 +113,7 @@
 }
 
 /**
- * 'nav--breadcrumbs' stellt die Liste als Breadcrumbnav dar
+ * 'nav--breadcrumbs' display as breadcrumbs
  */
 
 .nav--breadcrumbs {
