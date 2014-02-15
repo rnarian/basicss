@@ -13,7 +13,6 @@
  * Reset, Default settings
  */
 
-@import "../normalize-scss/_normalize.scss";
 @import "basicss/settings";
 
 /**
@@ -32,6 +31,7 @@
    Base Styles
    ==================================================== */
 
+@import "basicss/base/normalize";
 @import "basicss/base/main";
 @import "basicss/base/baseline-font";
 @import "basicss/base/links";
