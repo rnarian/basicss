@@ -8,21 +8,15 @@ $widthHelper: true;
  * Usage:
  * <div class="grid">
  *   <div class="grid__item  width--1of1  width-tab--1of3  width-desk--1of4">
- *     <div class="grid__inner">
  *       ...
- *     </div>
  *   </div>
  *   <div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
  *     <div class="grid">
  *       <div class="grid__item  width--1of1  width-tab--1of2">
- *         <div class="grid__inner">
  *           ...
- *         </div>
  *       </div>
  *       <div class="grid__item  width--1of1  width-tab--1of2">
- *         <div class="grid__inner">
  *           ...
- *         </div>
  *       </div>
  *     </div>
  *   </div>
@@ -32,25 +26,32 @@ $widthHelper: true;
  */
 
 .grid {
-  @include clearfix;
-}
-
-.grid--rev {
-  direction: rtl;
-  .grid__item {
-    direction: ltr;
-    text-align: left;
-  }
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -$baseUnit;
+  margin-left: -(toRem($baseUnit));
 }
 
 .grid__item {
-  @include display-inline-block;
+  display: inline-block;
   vertical-align: top;
   width: 100%;
+  padding-left: $baseUnit;
+  padding-left: toRem($baseUnit);
 }
 
-.grid__inner {
-  padding: 0 $baseUnit/2;
+/** 
+ * Reverse the order of grid items
+ */
+.grid--reversed {
+  direction: rtl;
+  text-align: left;
+
+  > .grid__item {
+    direction: ltr;
+    text-align: left;
+  }
 }
 
 }//@if
