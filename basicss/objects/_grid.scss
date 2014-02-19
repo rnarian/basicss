@@ -52,4 +52,15 @@ $widthHelper: true;
   }
 }
 
+/** 
+ * Grid items without gutters 
+ */
+.grid--flush {
+  margin-left: 0;
+  
+  > .grid__item {
+    padding-left: 0;
+  }
+}
+
 }//@if
