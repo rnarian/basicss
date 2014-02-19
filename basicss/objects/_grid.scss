@@ -63,4 +63,24 @@ $widthHelper: true;
   }
 }
 
+/** 
+ * Grid size variations 
+ */
+.grid--small {
+  @include px-to-rem(margin-left, (-($baseUnit/2)));
+
+  > .grid__item {
+    @include px-to-rem(padding-left, $baseUnit/2);
+  }
+}
+
+.grid--large {
+  @include px-to-rem(margin-left, (-($baseUnit*2)));
+
+  > .grid__item,
+  > %grid__item {
+    @include px-to-rem(padding-left, $baseUnit*2);
+  }
+}
+
 }//@if
