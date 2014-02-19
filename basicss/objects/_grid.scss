@@ -9,13 +9,13 @@ $widthHelper: true;
  * <div class="grid">
  *   <div class="grid__item  width--1of1  width-tab--1of3  width-desk--1of4">
  *       ...
- *   </div>
- *   <div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
+ *   </div><!--
+ *--><div class="grid__item  width--1of1  width-tab--2of3  width-desk--3of4">
  *     <div class="grid">
  *       <div class="grid__item  width--1of1  width-tab--1of2">
  *           ...
- *       </div>
- *       <div class="grid__item  width--1of1  width-tab--1of2">
+ *       </div><!--
+ *    --><div class="grid__item  width--1of1  width-tab--1of2">
  *           ...
  *       </div>
  *     </div>
@@ -29,16 +29,14 @@ $widthHelper: true;
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: -$baseUnit;
-  margin-left: -(toRem($baseUnit));
+  @include px-to-rem(margin-left, -$baseUnit);
 }
 
 .grid__item {
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  padding-left: $baseUnit;
-  padding-left: toRem($baseUnit);
+  @include px-to-rem(padding-left, $baseUnit);
 }
 
 /** 
