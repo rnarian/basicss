@@ -56,6 +56,10 @@
   @include widths('tab');
 }
 
+@include media($breakLaptop) {
+  @include widths('lap');
+}
+
 @include media($breakDesktop) {
   @include widths('desk');
 }

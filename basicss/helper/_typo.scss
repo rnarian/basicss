@@ -63,6 +63,7 @@
 
 @include text();
 @include media($breakTablet)      { @include text('tab'); }
+@include media($breakLaptop)      { @include text('lap'); }
 @include media($breakDesktop)     { @include text('desk'); }
 @include media($breakDesktopWide) { @include text('desk-wide'); }
 
