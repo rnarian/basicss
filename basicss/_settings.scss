@@ -22,6 +22,7 @@ $stackedObject: false!default;
 $navObject: true!default;
 $gridObject: true!default;
 $buttonObject: true!default;
+$constrainObject: false!default;
 
 /**
  * Default helper
@@ -63,6 +64,15 @@ $breakTablet: 481px!default;
 $breakLaptop: 721px!default;
 $breakDesktop: 1024px!default;
 $breakDesktopWide: 1200px!default;
+
+/**
+ * Default breakpoints
+ */
+
+$constrain-small:   380px!default;
+$constrain-medium:  480px!default;
+$constrain-large:   720px!default;
+$constrain-max:     980px!default;
 
 /**
  * Arrows

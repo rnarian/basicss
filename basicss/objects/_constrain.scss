@@ -1,0 +1,29 @@
+@if $constrainObject {
+/**
+ * _constrain.scss
+ *
+ * Author: Marius Scheel 
+ *
+ */
+
+.constrain {
+  margin: 0 auto;
+}
+
+.constrain--small {
+  @include px-to-rem(max-width, $constrain-small);
+}
+
+.constrain--medium {
+  @include px-to-rem(max-width, $constrain-medium);
+}
+
+.constrain--large {
+  @include px-to-rem(max-width, $constrain-large);
+}
+
+.constrain--max {
+  @include px-to-rem(max-width, $constrain-max);
+}
+
+} // endif
