@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                 files: [
                     '<%= dirs.css %>/*.scss',
                     '*.scss',
-                    'basics/**/*.scss'
+                    '<%= dirs.basicss %>/**/*.scss'
                 ],
                 tasks: ['sass:dev', 'autoprefixer'],
                 options: {
