@@ -1,7 +1,8 @@
-.wrapper {
-  @include px-to-rem(max-width, $breakDesktop);
-  margin: 0 auto;
-  @include px-to-rem(padding, 0 $baseUnit/2);
+
+
+
+body {
+  @include px-to-rem(padding, $baseUnit 0);
 }
 
 .nav--fit {

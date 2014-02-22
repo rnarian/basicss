@@ -1,0 +1,35 @@
+/**
+ * _baseline.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre {
+  @include px-to-rem(margin, 0 0 $baseUnit);
+}
+
+ul, ol, dd {
+  @include px-to-rem(margin-left, $baseUnit);
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}

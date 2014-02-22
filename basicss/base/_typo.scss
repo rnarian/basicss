@@ -1,11 +1,12 @@
 /**
- * _baseline-font.scss
+ * _typo.scss
  *
  * Author: Marian Friedmann
  *
  */
 
 html {
+  font-family: $fontMain;
   font-size: $baseFontSize;
   line-height: $lineHeightRatio;
   @include media($breakDesktop) {
@@ -14,17 +15,22 @@ html {
 }
 
 h1 {
-  @include font-size(48px);
+  @include font-size($baseFontSize*3);
   @include px-to-rem(margin, 0 0 $baseUnit);
 }
 
 h2 {
-  @include font-size(28px);
+  @include font-size($baseFontSize*1.75);
   @include px-to-rem(margin, 0 0 $baseUnit);
 }
 
-h3, h4, h5, h6 {
-  @include font-size(22px);
+h3, h4 {
+  @include font-size($baseFontSize*1.375);
+  @include px-to-rem(margin, 0 0 $baseUnit);
+}
+
+h5, h6 {
+  @include font-size($baseFontSize*1.125);
   @include px-to-rem(margin, 0 0 $baseUnit);
 }
 

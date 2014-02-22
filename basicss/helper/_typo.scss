@@ -30,28 +30,31 @@
 
 .text--large {
   h1, h2 {
-    @include font-size(96px);
-    margin: 0 0 $baseUnit;
-    margin: 0 0 toRem($baseUnit);
+    @include font-size($baseFontSize*6);
+  }
+  h3, h4 {
+    @include font-size($baseFontSize*3);
+  }
+  h5, h6 {
+    @include font-size($baseFontSize*2.375);
   }
   p, ul, ol {
-    @include font-size(48px);
-    margin: 0 0 $baseUnit;
-    margin: 0 0 toRem($baseUnit);
+    @include font-size($baseFontSize*1.75);
   }
-  margin-bottom: $baseUnit*3;
-  margin-bottom: toRem($baseUnit*3);
+  @include px-to-rem(margin, $baseUnit*2 0);
 }
 
 .text--small {
   h1, h2 {
-    @include font-size(14px);
-    margin: 0 0 0;
+    @include font-size($baseFontSize*.875);
+    margin: 0;
+  }
+  h3, h4, h5, h6 {
+    @include font-size($baseFontSize*.75);
+    margin: 0;
   }
   p, ul, ol {
-    @include font-size(12px);
-    margin: 0 0 $baseUnit;
-    margin: 0 0 toRem($baseUnit);
+    @include font-size($baseFontSize*.625);
   }
 }
 
