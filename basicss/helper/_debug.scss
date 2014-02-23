@@ -117,18 +117,18 @@ input:not([value])[type=submit] {
 
 @if $baseline == true {
 
-$baselineColor: $colorBlack;
+$baselineColor: #111111;
 
 /* Baseline Grid */
 
 body {
   @if $prototyping {
-    $baselineColor: $colorWhite;
-    background: $colorBlue;
-    color: $colorWhite;
+    $baselineColor: #fff;
+    background: #0074d9;
+    color: #fff;
   }
   a {
-    color: $colorSilver !important;
+    color: #dddddd !important;
     opacity: .7;
   }
   //background: linear-gradient(0deg, rgba(black,.6), rgba(black,0) 5%, rgba(black,0) 50%, rgba(black,.2) 50.1%, rgba(black,0) 55%), linear-gradient(90deg, rgba(black,.3), rgba(black,0) 5%, rgba(black,0) 50%, rgba(black,.2) 50.1%, rgba(black,0) 55%) center center;
