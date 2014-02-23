@@ -19,3 +19,11 @@ img {
    */
   color: #c00;
 }
+
+/**
+ * no fluid images, when width or height are set
+ */
+img[width],
+img[height] {
+  max-width: none;
+}
