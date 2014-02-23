@@ -9,32 +9,11 @@ html {
   font-family: $fontMain;
   font-size: $baseFontSize;
   line-height: $lineHeightRatio;
-  @include media($breakDesktop) {
-    font-size: $baseFontSize*1.125;
-  }
 }
 
-h1 {
-  @include font-size($baseFontSize*3);
-  @include px-to-rem(margin, 0 0 $baseUnit);
-}
-
-h2 {
-  @include font-size($baseFontSize*1.75);
-  @include px-to-rem(margin, 0 0 $baseUnit);
-}
-
-h3, h4 {
-  @include font-size($baseFontSize*1.375);
-  @include px-to-rem(margin, 0 0 $baseUnit);
-}
-
-h5, h6 {
-  @include font-size($baseFontSize*1.125);
-  @include px-to-rem(margin, 0 0 $baseUnit);
-}
-
-p {
-  @include font-size($baseFontSize);
-  @include px-to-rem(margin, 0 0 $baseUnit);
-}
+h1 { @include font-size($headingSize1); }
+h2 { @include font-size($headingSize2); }
+h3 { @include font-size($headingSize3); }
+h4 { @include font-size($headingSize4); }
+h5 { @include font-size($headingSize5); }
+h6 { @include font-size($headingSize6); }
