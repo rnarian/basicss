@@ -16,7 +16,7 @@
  *
  * - text--large
  * - text--small
- * - text--serif
+ * - text--secondary
  * - text--right
  * - text--center
  *
@@ -58,9 +58,9 @@
   }
 }
 
-.text--serif {
+.text--secondary {
   p, ul, ol, h1, h2, h3, h4, h5, h6 {
-    font-family: $fontSerif, serif;
+    font-family: $fontSecondary, serif;
   }
 }
 

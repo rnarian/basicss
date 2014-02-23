@@ -37,10 +37,8 @@ $debugHelper: false!default;
  * Default fonts
  */
 
-$fontSans: "Helvetica Neue", sans-serif!default;
-$fontSerif: Georgia, serif!default;
-
-$fontMain: $fontSans!default;
+$fontPrimary: "Helvetica Neue", sans-serif!default;
+$fontSecondary: Georgia, serif!default;
 
 /**
  * Default font size

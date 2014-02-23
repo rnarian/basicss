@@ -25,7 +25,7 @@ Install with [bower](http://bower.io):
 
     $arrowObject: true;
     $buttonObject: false;
-    $fontSans: "Proxima-nova", sans-serif;
+    $fontPrimary: "Proxima-nova", sans-serif;
     $arrowSize: 20px;
 
     /**
