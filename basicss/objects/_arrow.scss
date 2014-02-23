@@ -32,7 +32,7 @@
   &:before {
     border-left: $arrowSize solid transparent;
     border-right: $arrowSize solid transparent;
-    border-bottom: $arrowSize solid $colorWhite;
+    border-bottom: $arrowSize solid #fff;
     top: -$arrowSize;
   }
 }
@@ -68,7 +68,7 @@
   &:before {
     border-left: $arrowSize solid transparent;
     border-right: $arrowSize solid transparent;
-    border-top: $arrowSize solid $colorWhite;
+    border-top: $arrowSize solid #fff;
     bottom: -$arrowSize;
   }
 }
@@ -104,7 +104,7 @@
   &:before {
     border-top: $arrowSize solid transparent;
     border-bottom: $arrowSize solid transparent;
-    border-right: $arrowSize solid $colorWhite;
+    border-right: $arrowSize solid #fff;
     left: -$arrowSize;
   }
 }
@@ -140,7 +140,7 @@
   &:before {
     border-top: $arrowSize solid transparent;
     border-bottom: $arrowSize solid transparent;
-    border-left: $arrowSize solid $colorWhite;
+    border-left: $arrowSize solid #fff;
     right: -$arrowSize;
   }
 }
