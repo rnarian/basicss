@@ -37,10 +37,8 @@ $debugHelper: false!default;
  * Default fonts
  */
 
-$fontSans: "Helvetica Neue", sans-serif!default;
-$fontSerif: Georgia, serif!default;
-
-$fontMain: $fontSans!default;
+$fontPrimary: "Helvetica Neue", sans-serif!default;
+$fontSecondary: Georgia, serif!default;
 
 /**
  * Default font size
@@ -48,6 +46,17 @@ $fontMain: $fontSans!default;
 
 $baseFontSize: 16px!default;
 $baseLineHeight: 24px!default;
+
+/**
+ * Default headings 
+ */
+
+$headingSize1: 48px;
+$headingSize2: 36px;
+$headingSize3: 32px;
+$headingSize4: 24px;
+$headingSize5: 18px;
+$headingSize6: 16px;
 
 /**
  *  Default spacing
