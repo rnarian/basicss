@@ -33,6 +33,11 @@
   @include space(2, 'double', 'tab');
 }
 
+@include media($breakLaptop) {
+  @include space(1, '', 'lap');
+  @include space(2, 'double', 'lap');
+}
+
 @include media($breakDesktop) {
   @include space(1, '', 'desk');
   @include space(2, 'double', 'desk');
