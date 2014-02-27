@@ -25,25 +25,30 @@
  * Basic & spacing
  */
 
+@include space(0.5, 'half');
 @include space(1, '');
 @include space(2, 'double');
 
 @include media($breakTablet) {
+  @include space(0.5, 'half', 'tab');
   @include space(1, '', 'tab');
   @include space(2, 'double', 'tab');
 }
 
 @include media($breakLaptop) {
+  @include space(0.5, 'half', 'lap');
   @include space(1, '', 'lap');
   @include space(2, 'double', 'lap');
 }
 
 @include media($breakDesktop) {
+  @include space(0.5, 'half', 'desk');
   @include space(1, '', 'desk');
   @include space(2, 'double', 'desk');
 }
 
 @include media($breakDesktopWide) {
+  @include space(0.5, 'half', 'desk-wide');
   @include space(1, '', 'desk-wide');
   @include space(2, 'double', 'desk-wide');
 }
