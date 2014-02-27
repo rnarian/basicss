@@ -17,6 +17,7 @@
   line-height: $baseLineHeight*2;
   @include display-inline-block;
   margin: 0;
+  user-select: none;
 
   /* Cosmetics */
   padding: 0em $baseUnit;
