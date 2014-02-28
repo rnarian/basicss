@@ -1,0 +1,20 @@
+@if $widgetObject {
+/**
+ * _widget.scss
+ *
+ * Author: Marius Scheel 
+ *
+ */
+
+.widget {
+  @include px-to-rem(margin-bottom, $baseUnit);
+
+  > *:last-child,
+  > *:last-child > *:last-child,
+  > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+} // endif
