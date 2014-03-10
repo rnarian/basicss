@@ -43,4 +43,12 @@
   color: $colorLinkHover;
 }
 
+.button--round {
+  border-radius: $borderRadius;
+}
+
+.button--pill {
+  border-radius: 44em;
+}
+
 }//@if
