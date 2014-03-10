@@ -22,6 +22,10 @@
   @include px-to-rem(margin-bottom, $baseUnit);
 }
 
+.boxed--round {
+  border-radius: $borderRadius;
+}
+
 }//@if $boxedObject
 
 @if $prototyping {
