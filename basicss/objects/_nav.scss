@@ -15,6 +15,7 @@
  * - nav--fit        // forces the list to occupy the full width of its parent
  * - nav--keywords   // display as a list of keywords
  * - nav--breadcrumb // display as breadcrumbs
+ * - nav--parallel   // display nav items with parallel separator
  *
  * Markup:
  *
@@ -123,6 +124,29 @@
     }
     &:first-child:before{
       display: none;
+    }
+  }
+}
+
+/**
+ * 'nav--parallel' display with parallel separator
+ */
+
+.nav--parallel {
+  > li {
+    @include px-to-rem(padding-left, $baseUnit/4);
+
+    &:before {
+      content: "\007C";
+      @include px-to-rem(margin-right, $baseUnit/4);
+    }
+
+    &:first-child {
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
     }
   }
 }
