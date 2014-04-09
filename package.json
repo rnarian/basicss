@@ -1,6 +1,6 @@
 {
   "name": "basicss",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-sass": "~0.7.2",
