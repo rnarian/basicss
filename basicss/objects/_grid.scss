@@ -1,5 +1,5 @@
 @if $gridObject {
-$widthHelper: true;
+$widthHelper: true!global;
 /**
  * _grid.scss
  *

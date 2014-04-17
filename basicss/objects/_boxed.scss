@@ -1,6 +1,6 @@
 @if $prototyping {
-  $boxedObject: true;
-  $baseline: true;
+  $boxedObject: true!global;
+  $baseline: true!global;
 }
 
 @if $boxedObject {
