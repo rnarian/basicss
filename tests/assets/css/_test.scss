@@ -5,6 +5,10 @@ body {
   @include px-to-rem(padding, $baseUnit 0);
 }
 
+.boxed {
+  @extend %space--bottom-double;
+}
+
 .nav--fit {
   @include media(max-width $breakTablet - 1) {
     li {

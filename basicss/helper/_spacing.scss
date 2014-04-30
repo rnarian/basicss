@@ -2,10 +2,29 @@
   @if $scope != '' { $scope: -#{$scope}; }
   @if $name  != '' { $name: -#{$name}; }
 
-  .space#{$scope}--top#{$name}    { margin-top:    $baseUnit * $multiplier; margin-top:    toRem($baseUnit * $multiplier);}
-  .space#{$scope}--left#{$name}   { margin-left:   $baseUnit * $multiplier; margin-left:   toRem($baseUnit * $multiplier);}
-  .space#{$scope}--right#{$name}  { margin-right:  $baseUnit * $multiplier; margin-right:  toRem($baseUnit * $multiplier);}
-  .space#{$scope}--bottom#{$name} { margin-bottom: $baseUnit * $multiplier; margin-bottom: toRem($baseUnit * $multiplier);}
+  .space#{$scope}--top#{$name},
+  %space#{$scope}--top#{$name} { 
+    margin-top: $baseUnit * $multiplier;
+    margin-top: toRem($baseUnit * $multiplier);
+  }
+
+  .space#{$scope}--left#{$name},
+  %space#{$scope}--left#{$name} { 
+    margin-left: $baseUnit * $multiplier; 
+    margin-left: toRem($baseUnit * $multiplier);
+  }
+
+  .space#{$scope}--right#{$name},
+  %space#{$scope}--right#{$name} { 
+    margin-right: $baseUnit * $multiplier; 
+    margin-right: toRem($baseUnit * $multiplier);
+  }
+
+  .space#{$scope}--bottom#{$name},
+  %space#{$scope}--bottom#{$name} { 
+    margin-bottom: $baseUnit * $multiplier; 
+    margin-bottom: toRem($baseUnit * $multiplier);
+  }
 }
 
 @if $spacingHelper {
