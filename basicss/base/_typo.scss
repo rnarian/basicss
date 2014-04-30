@@ -11,9 +11,38 @@ html {
   line-height: $lineHeightRatio;
 }
 
-h1 { @include font-size($headingSize1); }
-h2 { @include font-size($headingSize2); }
-h3 { @include font-size($headingSize3); }
-h4 { @include font-size($headingSize4); }
-h5 { @include font-size($headingSize5); }
-h6 { @include font-size($headingSize6); }
+h1,
+.heading-1,
+%heading-1 { 
+  @include font-size($headingSize1);
+}
+
+h2,
+.heading-2,
+%heading-2 { 
+  @include font-size($headingSize2);
+}
+
+h3,
+.heading-3,
+%heading-3 { 
+  @include font-size($headingSize3);
+}
+
+h4,
+.heading-4,
+%heading-4 { 
+  @include font-size($headingSize4);
+}
+
+h5,
+.heading-5,
+%heading-5 { 
+  @include font-size($headingSize5);
+}
+
+h6,
+.heading-6,
+%heading-6 { 
+  @include font-size($headingSize6);
+}
