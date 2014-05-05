@@ -14,11 +14,19 @@
  *
  * Alt Text Styles.
  *
+ * ## sizing
  * - text--large
  * - text--small
- * - text--secondary
+ *
+ * ## alignment 
+ * - text--left
  * - text--right
  * - text--center
+ *
+ * ## utilities 
+ * - text--secondary
+ * - text--inherit-color
+ * - text--no-wrap
  *
  * Usage:
  * <div class="text--large">
@@ -62,6 +70,20 @@
   p, ul, ol, h1, h2, h3, h4, h5, h6 {
     font-family: $fontSecondary;
   }
+}
+
+/**
+ * Inherit ancestor's text color
+ */
+.text--inherit-color {
+  color: inherit !important;
+}
+
+/**
+ * Prevent text from wrapping
+ */
+.text--no-wrap {
+  white-space: nowrap !important;
 }
 
 @include text();
