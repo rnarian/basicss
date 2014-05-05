@@ -32,22 +32,13 @@
   text-decoration: none;
 }
 
-.button--secondary,
-.button--secondary:visited {
-  background: none;
-  color: inherit;
-}
-
-.button--secondary:hover {
-  background: #eee;
-  color: $colorLinkHover;
-}
-
-.button--round {
+.button--round,
+%button--round {
   border-radius: $borderRadius;
 }
 
-.button--pill {
+.button--pill,
+%button--pill {
   border-radius: 44em;
 }
 
