@@ -1,0 +1,82 @@
+@if $uiListObject {
+/**
+ * _ui-list.scss
+ *
+ * based on Harry Roberts ui-list object: 
+ * https://github.com/inuitcss/objects.ui-list/blob/master/_objects.ui-list.scss
+ *
+ * creates blocky items, can be used with lists or the corresponding markup:
+ *
+ * <div class="ui-list">
+ *  <div class="ui-list__item"></div>
+ *  <div class="ui-list__item"></div>
+ *  <div class="ui-list__item"></div>
+ * </div>
+ *
+ * or:
+ * 
+ * <ul class="ui-list ui-list--small">
+ *  <li></li>
+ *  <li></li>
+ *  <li></li>
+ * </ul>
+ * 
+ * can optionally be used with --separator for borders, and comes with 
+ * different size modifiers
+ *
+ */
+
+.ui-list,
+%ui-list {
+  margin:  0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    @extend %ui-list__item;
+  }
+}
+
+  .ui-list__item,
+  %ui-list__item {
+    @include px-to-rem(padding, $baseUnit/2);  
+  }
+
+.ui-list--separator,
+%ui-list--separator,
+  .ui-list__item,
+  %ui-list__item {
+    border: 0 solid $colorBorder;
+  }
+
+.ui-list--separator,
+%ui-list--separator {
+  border-top-width: 1px;
+
+  > li,
+  > .ui-list__item,
+  > %ui-list__item {
+    border-bottom-width: 1px; 
+  }
+}
+
+/**
+ * Modifiers for sizing the list
+ */
+.ui-list--small,
+%ui-list--small {
+  > .ui-list__item,
+  > %ui-list__item {
+    @include px-to-rem(padding, $baseUnit/4);
+  }
+}
+
+.ui-list--large,
+%ui-list--large {
+  > .ui-list__item,
+  > %ui-list__item {
+    @include px-to-rem(padding, $baseUnit);
+  }
+}
+
+}
