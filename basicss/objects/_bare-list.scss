@@ -1,0 +1,14 @@
+@if $bareListObject {
+/**
+ * _bare-list.scss
+ *
+ */
+
+.bare-list,
+%bare-list {
+  margin:  0;
+  padding: 0;
+  list-style: none;
+}
+
+}

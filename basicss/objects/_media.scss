@@ -1,0 +1,39 @@
+@if $mediaObject {
+/**
+ * _media.scss
+ *
+ */
+
+.media,
+%media {
+  @include clearfix;
+  display: block;
+}
+
+  .media__img,
+  %media__img {
+    float: left;
+    @include px-to-rem(margin-right, $baseUnit);
+
+    > img {
+      display: block;
+    }
+  }
+
+  .media__body,
+  %media__body {
+    overflow: hidden;
+
+    &,
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+.media--small {
+  .media__img,
+  %media__img {
+    @include px-to-rem(margin-right, $baseUnit/2);
+  }
+}
+}
