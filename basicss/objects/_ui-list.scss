@@ -21,8 +21,10 @@
  *  <li></li>
  * </ul>
  * 
- * can optionally be used with --separator for borders, and comes with 
- * different size modifiers
+ * can optionally be used with --separator and --border, where --separator
+ * adds borders to the list element and --border to the list itself
+ *
+ * comes with different size modifiers
  *
  */
 
@@ -51,13 +53,24 @@
 
 .ui-list--separator,
 %ui-list--separator {
-  border-top-width: 1px;
-
   > li,
   > .ui-list__item,
   > %ui-list__item {
-    border-bottom-width: 1px; 
+    border-top-width: 1px; 
   }
+
+  > li:first-child,
+  > .ui-list__item:first-child,
+  > %ui-list__item:first-child {
+    border-top-width: 0; 
+  }
+}
+
+
+.ui-list--border,
+%ui-list--border {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
 
 /**
