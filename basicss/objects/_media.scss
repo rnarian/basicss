@@ -13,6 +13,7 @@
   .media__img,
   %media__img {
     float: left;
+    line-height: 0;
     @include px-to-rem(margin-right, $baseUnit);
 
     > img {
@@ -30,10 +31,33 @@
     }
   }
 
+
+.media--rev,
+%media--rev {
+
+  > .media__img,
+  > %media__img {
+    float: right;
+    margin-right: 0;
+    @include px-to-rem(margin-left, $baseUnit);
+  }
+}
+
 .media--small {
   .media__img,
   %media__img {
     @include px-to-rem(margin-right, $baseUnit/2);
   }
+
+  &.media--rev,
+  &%media--rev {
+
+    > .media__img,
+    > %media__img {
+      margin-right: 0;
+      @include px-to-rem(margin-left, $baseUnit/2);
+    }
+  }
 }
+
 }
