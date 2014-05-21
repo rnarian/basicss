@@ -73,13 +73,13 @@ $lineHeightRatio: $baseLineHeight / $baseFontSize;
  * Default breakpoints
  */
 
-$breakTablet: 481px!default;
-$breakLaptop: 721px!default;
-$breakDesktop: 1024px!default;
+$breakTablet:       481px!default;
+$breakLaptop:       721px!default;
+$breakDesktop:     1024px!default;
 $breakDesktopWide: 1200px!default;
 
 /**
- * Default breakpoints
+ * Default constrains
  */
 
 $constrain-small:   380px!default;
