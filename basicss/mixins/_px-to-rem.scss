@@ -35,9 +35,3 @@
   #{$prop}: $values; // Fallback
   #{$prop}: $output;
 }
-
-.element {
-  @include px-to-rem(padding, 0 24px);
-  @include px-to-rem(margin, 0 24px 0 24px);
-  @include px-to-rem(margin-bottom, 0);
-}
