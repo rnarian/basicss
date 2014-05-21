@@ -11,19 +11,19 @@
 }
 
 .constrain--small {
-  @include px-to-rem(max-width, $constrain-small);
+  @include px-to-rem(max-width, $constrainSmall);
 }
 
 .constrain--medium {
-  @include px-to-rem(max-width, $constrain-medium);
+  @include px-to-rem(max-width, $constrainMedium);
 }
 
 .constrain--large {
-  @include px-to-rem(max-width, $constrain-large);
+  @include px-to-rem(max-width, $constrainLarge);
 }
 
 .constrain--max {
-  @include px-to-rem(max-width, $constrain-max);
+  @include px-to-rem(max-width, $constrainMax);
 }
 
 } // endif
