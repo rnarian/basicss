@@ -6,23 +6,28 @@
  *
  */
 
-.constrain {
+.constrain,
+%constrain {
   margin: 0 auto;
 }
 
-.constrain--small {
+.constrain--small,
+%constrain--small {
   @include px-to-rem(max-width, $constrainSmall);
 }
 
-.constrain--medium {
+.constrain--medium,
+%constrain--medium {
   @include px-to-rem(max-width, $constrainMedium);
 }
 
-.constrain--large {
+.constrain--large,
+%constrain--large {
   @include px-to-rem(max-width, $constrainLarge);
 }
 
-.constrain--max {
+.constrain--max,
+%constrain--max {
   @include px-to-rem(max-width, $constrainMax);
 }
 
