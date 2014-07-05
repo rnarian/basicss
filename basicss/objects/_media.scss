@@ -2,6 +2,21 @@
 /**
  * _media.scss
  *
+ * displays image and text side by side
+ *
+ * Example markup:
+ *
+    <div class="media media--small">
+      <div class="media__img"></div>
+      <div class="media__body"></div>
+    </div>
+ *
+ * use the `.media--rev` modifier to reverse the the image location and put it to the right
+ * use the `.media--small` modifier, to decrease the gutter width between image and content
+ *
+ * for more information have a look at: 
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ *
  */
 
 .media,
