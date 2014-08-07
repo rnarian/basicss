@@ -67,7 +67,16 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+
+    // Bump Version
+    bump: {
+      files: ['package.json', 'bower.json'], 
+      updateConfigs: ['pkg'],
+      commitFiles: ['package.json', 'bower.json'],
+      pushTo: 'origin'
     }
+
   });
 
   grunt.registerTask('default', ['sass:build', 'autoprefixer']);
