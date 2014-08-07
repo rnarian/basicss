@@ -1,6 +1,6 @@
 {
   "name": "basicss",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.6.5",
