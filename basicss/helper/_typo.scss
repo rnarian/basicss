@@ -14,10 +14,6 @@
  *
  * Alt Text Styles.
  *
- * ## sizing
- * - text--large
- * - text--small
- *
  * ## alignment 
  * - text--left
  * - text--right
@@ -35,42 +31,6 @@
  * </div>
  *
  */
-
-.text--large {
-  h1, h2 {
-    @include font-size($baseFontSize*6);
-  }
-  h3, h4 {
-    @include font-size($baseFontSize*3);
-  }
-  h5, h6 {
-    @include font-size($baseFontSize*2.375);
-  }
-  p, ul, ol {
-    @include font-size($baseFontSize*1.75);
-  }
-  @include px-to-rem(margin, $baseUnit*2 0);
-}
-
-.text--small {
-  h1, h2 {
-    @include font-size($baseFontSize*.875);
-    margin: 0;
-  }
-  h3, h4, h5, h6 {
-    @include font-size($baseFontSize*.75);
-    margin: 0;
-  }
-  p, ul, ol {
-    @include font-size($baseFontSize*.625);
-  }
-}
-
-.text--secondary {
-  p, ul, ol, h1, h2, h3, h4, h5, h6 {
-    font-family: $fontSecondary;
-  }
-}
 
 /**
  * Inherit ancestor's text color
