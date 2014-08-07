@@ -73,7 +73,8 @@ module.exports = function(grunt) {
     bump: {
       files: ['package.json', 'bower.json'], 
       updateConfigs: ['pkg'],
-      commitFiles: ['package.json', 'bower.json']
+      commitFiles: ['package.json', 'bower.json'],
+      pushTo: 'origin'
     }
 
   });
