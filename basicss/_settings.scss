@@ -5,19 +5,11 @@
  */
 
 /**
- * Various defaults
- */
-
-$debug: false!default;
-$baseline: false!default;
-$prototyping: false!default;
-
-/**
  * Default objects
  */
 
 $arrowObject: false!default;
-$boxedObject: false!default;
+$boxObject: false!default;
 $stackedObject: false!default;
 $navObject: false!default;
 $gridObject: false!default;
