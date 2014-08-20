@@ -20,7 +20,7 @@
   width: $baseUnit;
   height: $baseUnit;
   vertical-align: middle;
-  @include display-inline-block;
+  display: inline-block;
 }
 
 /**
