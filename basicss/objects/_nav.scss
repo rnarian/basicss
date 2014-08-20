@@ -35,7 +35,7 @@
   > li {
     &,
     > a {
-      @include display-inline-block;
+      display: inline-block;
     }
   }
 }
