@@ -83,25 +83,4 @@ $widthHelper: true!global;
   }
 }
 
-/** 
- * Text alignment for grid__items
- */
-.grid--alignLeft {
-  > .grid__item {
-    text-align: left;
-  }
-}
-
-.grid--alignCenter {
-  > .grid__item {
-    text-align: center;
-  }
-}
-
-.grid--alignRight {
-  > .grid__item {
-    text-align: right; 
-  }
-}
-
 }//@if
