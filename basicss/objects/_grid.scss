@@ -1,5 +1,5 @@
 @if $gridObject {
-$widthHelper: true!global;
+$widthHelper: true;
 /**
  * _grid.scss
  *
@@ -39,7 +39,7 @@ $widthHelper: true!global;
   @include px-to-rem(padding-left, $baseUnit);
 }
 
-/** 
+/**
  * Reverse the order of grid items
  */
 .grid--reversed {
@@ -52,19 +52,19 @@ $widthHelper: true!global;
   }
 }
 
-/** 
- * Grid items without gutters 
+/**
+ * Grid items without gutters
  */
 .grid--flush {
   margin-left: 0;
-  
+
   > .grid__item {
     padding-left: 0;
   }
 }
 
-/** 
- * Grid size variations 
+/**
+ * Grid size variations
  */
 .grid--small {
   @include px-to-rem(margin-left, (-($baseUnit/2)));
