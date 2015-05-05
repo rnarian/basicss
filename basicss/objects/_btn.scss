@@ -1,16 +1,16 @@
 @if $buttonObject {
 /**
- * _buttons.scss
+ * _btn.scss
  *
  * Author: Marian Friedmann
  *
  * Usage:
- * <a class="button [button--secondary]" href="#">Button</a>
- * <input type="text" class="button">
- * <button class="button">Button</button>
+ * <a class="btn [btn--secondary]" href="#">btn</a>
+ * <input type="text" class="btn">
+ * <button class="btn">btn</button>
  */
 
-.button {
+.btn {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -27,24 +27,24 @@
   background-color: $colorLink;
 }
 
-.button:hover{
+.btn:hover{
   background-color: $colorLinkHover;
   color: #fff;
   text-decoration: none;
 }
 
-.button--round,
-%button--round {
+.btn--round,
+%btn--round {
   border-radius: $borderRadius;
 }
 
-.button--pill,
-%button--pill {
+.btn--pill,
+%btn--pill {
   border-radius: 44em;
 }
 
-.button--full,
-%button--full {
+.btn--full,
+%btn--full {
   width: 100%;
 }
 
