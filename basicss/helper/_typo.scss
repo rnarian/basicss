@@ -46,6 +46,13 @@
   white-space: nowrap !important;
 }
 
+/**
+ * Display text in secondary font
+ */
+.text--secondary {
+  font-family: $fontSecondary !important;
+}
+
 @include text();
 @include media($breakTablet)      { @include text('tab'); }
 @include media($breakLaptop)      { @include text('lap'); }
