@@ -23,6 +23,7 @@
  * - text--secondary
  * - text--inherit-color
  * - text--no-wrap
+ * - text--large
  *
  * Usage:
  * <div class="text--large">
@@ -51,6 +52,13 @@
  */
 .text--secondary {
   font-family: $fontSecondary !important;
+}
+
+/**
+ * Display larger text
+ */
+.text--large {
+  font-size: $headingSize4 !important;
 }
 
 @include text();
