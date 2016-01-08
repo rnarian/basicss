@@ -58,7 +58,8 @@
  * Display larger text
  */
 .text--large {
-  font-size: $headingSize4 !important;
+  @include font-size($headingSize4, false);
+  line-height: 1.5;
 }
 
 @include text();
