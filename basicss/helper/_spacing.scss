@@ -4,26 +4,26 @@
 
   .space#{$scope}--top#{$name},
   %space#{$scope}--top#{$name} { 
-    margin-top: $baseUnit * $multiplier;
-    margin-top: toRem($baseUnit * $multiplier);
+    margin-top: $baseUnit * $multiplier !important;
+    margin-top: toRem($baseUnit * $multiplier) !important;
   }
 
   .space#{$scope}--left#{$name},
   %space#{$scope}--left#{$name} { 
-    margin-left: $baseUnit * $multiplier; 
-    margin-left: toRem($baseUnit * $multiplier);
+    margin-left: $baseUnit * $multiplier !important; 
+    margin-left: toRem($baseUnit * $multiplier) !important;
   }
 
   .space#{$scope}--right#{$name},
   %space#{$scope}--right#{$name} { 
-    margin-right: $baseUnit * $multiplier; 
-    margin-right: toRem($baseUnit * $multiplier);
+    margin-right: $baseUnit * $multiplier !important; 
+    margin-right: toRem($baseUnit * $multiplier) !important;
   }
 
   .space#{$scope}--bottom#{$name},
   %space#{$scope}--bottom#{$name} { 
-    margin-bottom: $baseUnit * $multiplier; 
-    margin-bottom: toRem($baseUnit * $multiplier);
+    margin-bottom: $baseUnit * $multiplier !important; 
+    margin-bottom: toRem($baseUnit * $multiplier) !important;
   }
 }
 
